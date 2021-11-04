@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up-Yum Villa</title>
+</head>
+<body class="signupbody" style="background-color: #FD9843;">
+  <h2 class="fw-bold mt-4 text-center" style="color: #ffe0c6;">Create a YumVila account</h2>
+  <div class="signup-card d-flex justify-content-center align-items-center h-100" style="border-radius: 15px; background-color: #ff86239a;">
+  <form action= "" method = "POST" class="row">
+    {% csrf_token %}
+    <div>
+      {% for message in messages %}
+      <h4 style="color: red;">{{message}}</h4>
+      {% endfor %}
+    </div>
+    <div class="col-md-12 mb-4">
+      <label for="validationDefault01" class="form-label">First name</label>
+      <input type="text" name = "first_name" class="form-control rounded-4" id="validationDefault01" style= "background-color: #FECBA1;" required>
+    </div>
+    <div class="col-md-12 mb-4">
+      <label for="validationDefault02" class="form-label">Last name</label>
+      <input type="text" name = "last_name" class="form-control rounded-4" id="validationDefault02" style= "background-color: #FECBA1;" required>
+    </div>
+    <div class="col-md-12 mb-4">
+      <label for="validationDefaultUsername" class="form-label">Username</label>
+      <div class="input-group">
+        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        <input type="text" name = "username" class="form-control rounded-4" id="validationDefaultUsername" style= "background-color: #FECBA1;" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+    <div class="col-md-12 mb-4">
+      <label for="validationDefault03" class="form-label">Email</label>
+      <input type="email" name = "email" class="form-control rounded-4" id="validationDefault03" style= "background-color: #FECBA1;" required>
+    </div>
+    <div class="col-md-12 mb-4">
+      <label for="Password1" class="form-label">Password</label>
+      <input type="password" name = "password" class="form-control rounded-4" id="floatingPassword"  style= "background-color: #FECBA1;" required>
+    </div>
+    <div class="col-md-12 mb-4">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" style= "background-color: #FECBA1;" required>
+        <label class="form-check-label" for="invalidCheck2">
+          Agree to <a href="t&c.html" style="color: #ffe0c6;"> terms and conditions </a>
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn " style="background-color: rgb(253, 177, 36); color: #ffe0c6;" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

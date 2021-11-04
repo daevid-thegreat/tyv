@@ -1,0 +1,110 @@
+body { font-family: 'Cormorant Garamond';}
+html{
+  scroll-behavior: smooth;
+}
+.navbar{
+  padding: 6px 5%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.navbar .navbar-brand{
+  font-size: 1.4rem;
+  font-weight: 700;
+  
+}
+#navbartoggle > ul > li:nth-child(n) > a{
+  color: #FECBA1;
+}
+#navbartoggle > ul > li:nth-child(n) > a:active{
+  color: #ffa155;
+}
+#navbartoggle > ul > li:nth-child(n) > a:hover{
+  color: #ffa155;
+}
+.navbar-nav .dropdown-menu {
+  background-color: #FD7E14;
+}
+.navbar-nav .dropdown-menu :hover{
+  background-color: #fecba159;
+
+}
+#searchbox{
+  border-radius: 55px;
+  padding: 5px;
+  background-color: #FECBA1;
+  align-items: center;
+}
+#searchicon{
+  width: 50px;
+  cursor: pointer;
+}
+input{
+  font-size: 15px;
+  width: 200px;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+.profile .dropdown-menu :hover{
+  background-color: #fecba159;
+
+}
+.profile{
+  position: relative;
+  display: inline-block;
+}
+
+.create .dropdown-menu :hover{
+  background-color: #fecba159;
+}
+.create{
+  margin-left: 8px;
+}
+.row{
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  margin: 14px;
+  padding: 50px 4%;
+}
+.post-col .more .dropdown-menu :hover{
+  background-color: #fecba159;
+
+}
+.post-card{
+  margin-bottom: 8px;
+}
+.post-img{
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 5px;
+
+}
+.post-activity{
+  justify-content: space-between;
+}
+.signupbody{
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+  
+}
+.profile-container{
+  padding: 40px;
+  display: flex;
+  align-self: flex-start;
+  border-radius: 5px;
+}
+.pro-img{
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.settings-col{
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  margin: 14px;
+  padding: 50px 4%;
+}

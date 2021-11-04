@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yum Villa </title>
+</head>
+<body style="background-color: #FD9843;">
+<header>
+<nav class="navbar navbar-expand-md navbar-dark navbar fixed-top" style="background-color: #FD7E14;">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: rgb(253, 177, 36);" href="home.html"> <img src="{% static 'images\yumvillalogo.png' %}" width="80" height="40"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbartoggle" aria-controls="navbartoggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+        <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+      </svg>
+    </button>
+    <div class="collapse navbar-collapse" id="navbartoggle">
+    
+     <ul class="navbar-nav mx-auto" >
+        <li><a class="nav-link fs-4 "  href="home.html"> Feed</a></li>
+        <li><a class="nav-link fs-4 " href="chat.html"> Messages <span class="badge badge" style= "background-color: #FECBA1; color: brown;" > 2 </span></a></li>
+        <li><a class="nav-link fs-4 " href="marketplace.html"> Marketplace</a></li>
+        <li><a class="nav-link fs-4 " href="notifs.html"> Notification <span class="badge badge" style= "background-color: #FECBA1; color: brown;" > 7 </span></a></li>
+        <li class="nav-item dropdown" >
+          <div class="dropdown">
+            <a class="nav-link fs-4 dropdown-toggle" href="" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
+               More
+            </a>
+            <ul class="dropdown-menu"  aria-labelledby="dropdownMenu1">
+              <li><a class="dropdown-item fs-4" href="saved.html" style="color: #FECBA1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
+                <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
+              </svg> Saved</a></li>
+              <li><a class="dropdown-item fs-4" href="jobs.html" style="color: #FECBA1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+              </svg> Recipes</a></li>
+              <li><a class="dropdown-item fs-4" href="videos.html" style="color: #FECBA1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+                <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"/>
+              </svg> Videos</a></li>
+              <li><a class="dropdown-item fs-4" href="reviews.html" style="color: #FECBA1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+                <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
+              </svg> Reviews</a></li>
+              <li><a class="dropdown-item fs-4" href="jobs.html" style="color: #FECBA1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+              </svg> Jobs</a></li>
+              <li><a class="dropdown-item fs-4" href="jobs.html" style="color: #FECBA1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
+                <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+                <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+              </svg> Games</a></li>
+            </ul>
+          </div>
+        </li>
+     </ul>
+     <div id="searchbox">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" id="searchicon" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+      <input type="text" placeholder="Search YumVilla">
+     </div>
+     </div>
+     <div class="create dropdown">
+      <a class="btn dropdown-toggle " style="color: #FECBA1;" id="createtoggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" style="color: #FECBA1;" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+      </a>
+      <ul class="dropdown-menu" style="background-color: #FD7E14; " aria-labelledby="createtoggle">
+        <li><a class="dropdown-item fs-4" style="color: #FECBA1;" href="#">Normal Post</a></li>
+        <li><a class="dropdown-item fs-4" style="color: #FECBA1;" href="#">Post Recipe</a></li>
+        <li><a class="dropdown-item fs-4" style="color: #FECBA1;" href="#">Post Review</a></li>
+        <li><a class="dropdown-item fs-4" style="color: #FECBA1;" href="#">Go Live</a></li>
+      </ul>
+    </div>
+    
+     <div class="profile dropdown" style="margin-left:30px;">
+      <a href="#" style="color: #FECBA1;" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&accessoriesType=Sunglasses&hairColor=BrownDark&facialHairType=BeardMajestic&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheColor=PastelRed&graphicType=Pizza&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Tanned' alt="" width="32" height="32" class="rounded-circle">
+      </a>
+
+      <!--ul is to be here-->
+    </div>
+  </div>
+    </nav>
+</header>
+  <div class="row">
+    <div class="post-col col-md-8">
+        <div class="post-card" style="background-color:#f5882f;">
+          <div class="card-body">
+            <div class="card-title py-2 d-flex flex-row align-items-center justify-content-between">
+                     <a href="profile.html"  class="d-block link-dark text-decoration-none fs-4">
+                      <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&accessoriesType=Sunglasses&hairColor=BrownDark&facialHairType=BeardMajestic&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheColor=PastelRed&graphicType=Pizza&eyeType=Default&eyebrowType=Default&mouthType=Eating&skinColor=Tanned' alt="" width="32" height="32" class="rounded-circle"> <strong style="color: #72370d;"> Gordon Ramsey </strong>
+                    </a>
+            <div class="more dropdown no-arrow" >
+           <a class="dropdown-toggle" style="color: brown;" href="#" role="button" id="dropdownMenuLink"   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     </a>
+   <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in fs-4" style="background-color: #f5882f;" aria-labelledby="dropdownMenuLink">
+   <a class="dropdown-item fs-4" href="#" style="color: #72370d; ">Save Post</a>
+     <a class="dropdown-item fs-4" href="#" style="color: #72370d; ">Copy Post Link</a>
+  <div class="dropdown-divider"></div>
+               <a class="dropdown-item fs-4" href="#" style="color: #72370d; ">Report Post</a>
+            </div>
+   </div>
+  </div>
+            <p class="card-text fs-5" style="color: #72370d;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla eum magnam aliquid officiis et quae iste placeat eveniet aut laborum repellat, corrupti voluptas at labore iusto perferendis similique qui laudantium!</p>
+          </div>
+          <img class="post-img" src="{% static '/images/eggandbacon.jpg' %}" alt="Card image cap">
+
+          <div class="post-activity">
+          <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+            <path d="M2 0c-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0 .55.23 1.04.59 1.41l3.41 3.41 3.41-3.41c.36-.36.59-.85.59-1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59z"
+            transform="translate(0 1)" />
+          </svg> 822</div>
+        
+          <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+            <path d="M0 0v5l1-1h1v-3h3v-1h-5zm3 2v4h4l1 1v-5h-5z" />
+          </svg> 33</div>
+       
+          <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+            <path d="M5 0v2c-4 0-5 2.05-5 5 .52-1.98 2-3 4-3h1v2l3-3.16-3-2.84z" />
+          </svg> 32</div>
+        </div>
+         <p class="card-text" style="color: #72370d;"><small  >Last updated 3 mins ago</small></p>  
+       </div> 
+
+
+
+       <div class="post-card" style="background-color:#f5882f;">
+        <div class="card-body">
+          <div class="card-title py-2 d-flex flex-row align-items-center justify-content-between">
+                   <a href="profile.html"  class="d-block link-dark text-decoration-none">
+                    <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&accessoriesType=Sunglasses&hairColor=BrownDark&facialHairType=BeardMajestic&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheColor=PastelRed&graphicType=Pizza&eyeType=Default&eyebrowType=Default&mouthType=Eating&skinColor=Tanned' alt="" width="32" height="32" class="rounded-circle"> <strong style="color: #72370d;"> Makinde David</strong>
+                  </a>
+          <div class="more dropdown no-arrow" >
+         <a class="dropdown-toggle" style="color: brown;" href="#" role="button" id="dropdownMenuLink"   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   </a>
+ <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" style="background-color: #f5882f;" aria-labelledby="dropdownMenuLink">
+ <a class="dropdown-item" href="#" style="color: #72370d;">Save Post</a>
+   <a class="dropdown-item" href="#" style="color: #72370d;">Copy Post Link</a>
+<div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="#" style="color: #72370d;">Report Post</a>
+          </div>
+ </div>
+</div>
+          <p class="card-text" style="color: #72370d;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum repudiandae in soluta quia, totam ullam natus rem tenetur iure libero? Explicabo perspiciatis animi velit suscipit ducimus? Nihil aut consequatur voluptatum!</p>
+</div>
+        <div class="post-activity">
+        <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+          <path d="M2 0c-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0 .55.23 1.04.59 1.41l3.41 3.41 3.41-3.41c.36-.36.59-.85.59-1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59z"
+          transform="translate(0 1)" />
+        </svg> 65</div>
+      
+        <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+          <path d="M0 0v5l1-1h1v-3h3v-1h-5zm3 2v4h4l1 1v-5h-5z" />
+        </svg> 54</div>
+     
+        <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+          <path d="M5 0v2c-4 0-5 2.05-5 5 .52-1.98 2-3 4-3h1v2l3-3.16-3-2.84z" />
+        </svg> 23</div>
+      </div>
+       <p class="card-text fs-6" style="color: #72370d;">Last updated 45 mins ago</p>  
+     </div> 
+
+
+
+
+     <div class="post-card" style="background-color:#f5882f;">
+      <div class="card-body">
+        <div class="card-title py-2 d-flex flex-row align-items-center justify-content-between">
+                 <a href="profile.html"  class="d-block link-dark text-decoration-none">
+                  <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairBigHair&accessoriesType=Kurt&hairColor=Red&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=PastelRed&graphicType=Pizza&eyeType=Hearts&eyebrowType=Default&mouthType=Eating&skinColor=Tanned' alt="" width="32" height="32" class="rounded-circle"> <strong style="color: #72370d;"> Martha Stewart </strong>
+                </a>
+        <div class="more dropdown no-arrow" >
+       <a class="dropdown-toggle" style="color: brown;" href="#" role="button" id="dropdownMenuLink"   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ </a>
+<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" style="background-color: #f5882f;" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item" href="#" style="color: #72370d;">Save Post</a>
+ <a class="dropdown-item" href="#" style="color: #72370d;">Copy Post Link</a>
+<div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#" style="color: #72370d;">Report Post</a>
+        </div>
+</div>
+</div>
+<p class="card-text" style="color: #72370d;">This fun, cinnamon-scented twist on apple pie can feed a crowd while wow-ing them at the same time. The same homemade pie dough forms both the base crust and the topping—the magic happens when a sweetened cinnamon-butter is spread on half of the dough and rolled up like a log and chilled. Once sliced into swirly rounds, they're shingled on top of the baking sheet of spiced apples and baked until golden brown and bubbly.</p>
+        
+      </div>
+      <img class="post-img" src="{% static 'images\noodle.jpg' %}" alt="Card image cap">
+
+      <div class="post-activity">
+      <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+        <path d="M2 0c-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0 .55.23 1.04.59 1.41l3.41 3.41 3.41-3.41c.36-.36.59-.85.59-1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59z"
+        transform="translate(0 1)" />
+      </svg> 92</div>
+    
+      <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+        <path d="M0 0v5l1-1h1v-3h3v-1h-5zm3 2v4h4l1 1v-5h-5z" />
+      </svg> 73</div>
+   
+      <div class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 8">
+        <path d="M5 0v2c-4 0-5 2.05-5 5 .52-1.98 2-3 4-3h1v2l3-3.16-3-2.84z" />
+      </svg> 2</div>
+    </div>
+     <p class="card-text" style="color: #72370d;">Last updated 3 mins ago</p>  
+   </div> 
+       
+       
+
+    </div>
+  
+
+    <div class="side-col col-md-4 mx-auto blog-sidebar ">
+      <div class="p-3">
+        <article><h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-ad" viewBox="0 0 16 16">
+          <path d="m3.7 11 .47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
+          <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+        </svg>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ab natus nobis. Veniam error voluptates iusto ducimus ipsam quibusdam! Voluptas, incidunt unde neque consequatur ratione corporis. Corporis vitae deleniti veniam.</h4></article>
+      </div>
+      <div class="my-3 p-3 rounded box-shadow" style="background-color: #f5882fd2;">
+        <h6 class="border-bottom border-gray pb-2 mb-0" style="color: rgb(58, 19, 19);">Suggestions</h6>
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <a href="user.html" class="text-decoration-none"><strong style="color:#684529;">Makinde Daniel</strong></a>
+              <button type="button" class="btn btn btn-sm" style="background-color: #FD7E14; color:#684529;">
+                Follow</button>
+            </div>
+            <span class="d-block" style="color: rgb(129, 39, 39);">@mazaline</span>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <a href="user.html" class="text-decoration-none"><strong style="color:#684529;">Isaac Obeng</strong></a>
+              <button type="button" class="btn btn btn-sm" style="background-color: #FD7E14; color:#684529;">
+                Follow</button>
+            </div>
+            <span class="d-block" style="color: rgb(129, 39, 39);">@otis</span>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <a href="user.html" class="text-decoration-none"><strong style="color:#684529;">Odelia Enos</strong></a>
+              <button type="button" class="btn btn btn-sm" style="background-color: #FD7E14; color:#684529;">
+                Follow</button>
+            </div>
+            <span class="d-block" style="color: rgb(129, 39, 39);">@delia</span>
+          </div>
+        </div>
+        <small class="d-block text-right mt-3" >
+          <a href="suggestions.html" style="color: rgb(129, 39, 39);">All suggestions</a>
+        </small>
+      </div>
+      <article><h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-ad" viewBox="0 0 16 16">
+        <path d="m3.7 11 .47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
+        <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+      </svg>kjjkfjfjfjfjjjj jvv chc cihif h rh h htg ghh g g gt rt hr tttttftgvbtfh hrd ht tyyhy t</h4></article>   
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
