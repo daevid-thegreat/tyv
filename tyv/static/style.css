@@ -55,6 +55,23 @@ input{
   display: inline-block;
 }
 
+.profile-menu{
+  position:absolute;
+  width: 90%;
+  max-width: 350px;
+  background: #FD7E14;
+  box-shadow: 0 0 6px #FECBA1;
+  border-radius: 4px;
+  overflow: hidden;
+  top: 108%;
+  right: 5%;
+  max-height: 0;
+  transition: max-height 0.2s;
+}
+.profile-menu-height{
+  max-height: 450px;
+}
+
 .create .dropdown-menu :hover{
   background-color: #fecba159;
 }
@@ -107,4 +124,39 @@ input{
   justify-content: space-between;
   margin: 14px;
   padding: 50px 4%;
+}
+.user-profile a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #FECBA1;
+}
+.profile-menu-inner{
+  padding: 20px;
+
+}
+
+.profile-menu-inner hr{
+  border: 0;
+  height: 1px;
+  background: black;
+  margin: 15px 0;
+}
+.profile-links{
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+
+}
+.profile-links .profile-link-icon{
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.profile-links a{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #FECBA1;
 }
